@@ -1,0 +1,14 @@
+
+<%- include('partials/header') -%>
+
+<h1>Welcome Home </h1>
+<p> Add New Post :
+<a href="/compose"><button class='btn btn-lg ' type="button" name="button">+</button></a>
+</p>
+<% posts.forEach(function(post){ %>
+  <div class="post">
+      <h1> <%= post.title %> </h1>
+      <p> <%= post.text.substr(0 , 100) + ' ...' ; %> </p><a href="/posts/<%= post.title %>">Read More</a>
+  </div>
+<% }); %>
+<%- include( 'partials/footer') -%>
