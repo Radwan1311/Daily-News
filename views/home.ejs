@@ -8,7 +8,7 @@
 <% posts.forEach(function(post){ %>
   <div class="post">
       <h1> <%= post.title %> </h1>
-      <p> <%= post.text.substr(0 , 100) + ' ...' ; %> </p><a href="/posts/<%= post.title %>">Read More</a>
+      <p> <%= post.text.substr(0 , 100) + ' ...' ; %> </p><a href="/posts/<%=post._id%>">Read More</a>
   </div>
 <% }); %>
 <%- include( 'partials/footer') -%>
